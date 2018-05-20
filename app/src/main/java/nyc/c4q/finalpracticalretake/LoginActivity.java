@@ -58,7 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (usernameET.getText() != null && passwordET.getText() != null) {
                     username = usernameET.getText().toString();
                     if (passwordET.getText().toString().toLowerCase().contains(username.toLowerCase())) {
-                        passwordET.setText(R.string.contains_username);
+                        passwordET.setText("");
+                        passwordET.setHint(R.string.contains_username);
                     } else {
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putString(USER_KEY, username).apply();

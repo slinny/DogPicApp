@@ -6,6 +6,149 @@
     android:layout_height="match_parent"
     tools:context="nyc.c4q.finalpracticalretake.BreedsActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/breeds_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding"
+            android:textSize="@dimen/text_size"
+            android:text="@string/app_name"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/terrier_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemview_size"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/terrier"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:id="@+id/terrier_image"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/spaniel_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemview_size"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/spaniel"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:id="@+id/spaniel_image"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/retriever_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemview_size"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/retriever"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:id="@+id/retriever_image"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/poodle_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemview_size"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/poodle"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:id="@+id/poodle_image"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
 
 
 </android.support.constraint.ConstraintLayout>

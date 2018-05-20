@@ -13,13 +13,17 @@
         android:id="@+id/username_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="username"/>
+        android:hint="username"
+        android:inputType="text"
+        android:maxLines="1"/>
 
     <EditText
         android:id="@+id/password_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="passsword"/>
+        android:hint="passsword"
+        android:inputType="text"
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/submit_button"
