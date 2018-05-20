@@ -49,12 +49,12 @@ public class DogsActivity extends AppCompatActivity {
     }
 
     private void setViews(){
+        preferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
         dogTextView = findViewById(R.id.dog_textview);
         dogRecyclerView = findViewById(R.id.dog_recyclerview);
         intent = getIntent();
         dogService = Common.getBreed();
         breedName = intent.getStringExtra(BreedsActivity.BREED_NAME);
-        preferences = getApplicationContext().getSharedPreferences(intent.getStringExtra("shared"), MODE_PRIVATE);
         dogTextView.setText(breedName);
     }
 

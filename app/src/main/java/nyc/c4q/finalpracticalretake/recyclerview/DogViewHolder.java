@@ -38,8 +38,6 @@ public class DogViewHolder extends RecyclerView.ViewHolder implements View.OnCli
         Context context = itemView.getContext();
         Intent intent = new Intent(context, PhotoActivity.class);
         intent.putExtra(URL, url);
-        Log.d("onClick: ", url);
         context.startActivity(intent);
-
     }
 }
