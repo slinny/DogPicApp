@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -32,9 +33,10 @@ public class BreedsActivity extends AppCompatActivity implements View.OnClickLis
     private TextView usernameText;
     private String[] breedName = {"terrier", "spaniel", "retriever", "poodle"};
     private String username;
-    private ImageView terrierImage, spanielImage, retrieverImage, poodleImage;
+    private ImageView terrierImage, spanielImage, retrieverImage, poodleImage, imageView;
     private DogService dogService;
     public static final String BREED_NAME = "breedName";
+    private ScrollView breedsScrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +61,12 @@ public class BreedsActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void setViews() {
+        breedsScrollView = findViewById(R.id.breeds_scrollview);
         usernameText = (TextView) findViewById(R.id.breeds_username);
 
         usernameText.setText(String.format("%s%s?", getString(R.string.what_kind_dog), username));
+
+
 
         terrierImage = (ImageView) findViewById(R.id.terrier_image);
         spanielImage = (ImageView) findViewById(R.id.spaniel_image);
@@ -99,10 +104,7 @@ public class BreedsActivity extends AppCompatActivity implements View.OnClickLis
         dogService.getBreed(breedName).enqueue(new Callback<Breed>() {
             @Override
             public void onResponse(Call<Breed> call, Response<Breed> response) {
-                Log.d("==", "onResponse: "+response.body().toString());
                 String url = response.body().getMessage();
-
-                ImageView imageView = terrierImage;
                 switch (breedName) {
                     case "terrier":
                         imageView = terrierImage;

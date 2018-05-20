@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 
 import com.squareup.picasso.Picasso;
 
@@ -26,6 +27,7 @@ public class PhotoActivity extends AppCompatActivity {
     private Intent intent;
     private DogService dogService;
     private String url;
+    private ScrollView dogPhotoScrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class PhotoActivity extends AppCompatActivity {
     }
 
     private void setViews(){
+        dogPhotoScrollView = findViewById(R.id.dog_photo_scrollview);
         preferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
         dogPhotoImageView = findViewById(R.id.dog_photo_imageview);
         intent = getIntent();

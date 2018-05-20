@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="nyc.c4q.finalpracticalretake.BreedsActivity">
 
+    <ScrollView
+        android:id="@+id/breeds_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -149,6 +154,6 @@
 
     </LinearLayout>
 
-
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
