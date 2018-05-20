@@ -14,4 +14,5 @@ public class Constants {
     public static final String SPANIEL = "spaniel";
     public static final String RETRIEVER = "retriever";
     public static final String POODLE = "poodle";
+    public static final String URL = "url";
 }
